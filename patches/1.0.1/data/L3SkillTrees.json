@@ -1,0 +1,2074 @@
+{
+  "version": 2,
+  "settings": {
+    "pointsPerLevel": 1,
+    "firstPointLevel": 2,
+    "specializationMode": "free",
+    "resetCostGold": 0,
+    "resetItemId": 0
+  },
+  "classes": {
+    "1": {
+      "name": "Héros",
+      "trees": [
+        {
+          "id": "hero_vanguard",
+          "name": "Avant-garde",
+          "description": "Endurance, garde et présence en première ligne.",
+          "nodes": [
+            {
+              "id": "hero_vanguard_breath",
+              "name": "Souffle héroïque",
+              "type": "passive",
+              "iconIndex": 64,
+              "cost": 1,
+              "x": 124,
+              "y": 130,
+              "description": "+90 PV max.",
+              "effects": {
+                "params": {
+                  "mhp": 90
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "hero_vanguard_stance",
+              "name": "Posture solide",
+              "type": "passive",
+              "iconIndex": 84,
+              "cost": 1,
+              "x": 124,
+              "y": 260,
+              "description": "+6 Défense.",
+              "effects": {
+                "params": {
+                  "def": 6
+                }
+              },
+              "requires": [
+                "hero_vanguard_breath"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "hero_vanguard_guard",
+              "name": "Garde serrée",
+              "type": "passive",
+              "iconIndex": 75,
+              "cost": 1,
+              "x": 52,
+              "y": 390,
+              "description": "+5% Défense.",
+              "effects": {
+                "rates": {
+                  "def": 1.05
+                }
+              },
+              "requires": [
+                "hero_vanguard_stance"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "hero_vanguard_taunt",
+              "name": "Provocation",
+              "type": "skill",
+              "iconIndex": 75,
+              "cost": 1,
+              "x": 196,
+              "y": 390,
+              "description": "Apprend Provocation héroïque.",
+              "effects": {
+                "skillId": 11
+              },
+              "requires": [
+                "hero_vanguard_stance"
+              ],
+              "skillId": 11,
+              "maxRank": 1
+            },
+            {
+              "id": "hero_vanguard_vitality",
+              "name": "Coeur tenace",
+              "type": "passive",
+              "iconIndex": 64,
+              "cost": 2,
+              "x": 52,
+              "y": 520,
+              "description": "+120 PV max.",
+              "effects": {
+                "params": {
+                  "mhp": 120
+                }
+              },
+              "requires": [
+                "hero_vanguard_guard"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "hero_vanguard_shield",
+              "name": "Élan protecteur",
+              "type": "passive",
+              "iconIndex": 81,
+              "cost": 2,
+              "x": 196,
+              "y": 520,
+              "description": "+4% Contre.",
+              "effects": {
+                "xparams": {
+                  "cnt": 0.04
+                }
+              },
+              "requires": [
+                "hero_vanguard_taunt"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "hero_vanguard_line",
+              "name": "Tenir la ligne",
+              "type": "passive",
+              "iconIndex": 84,
+              "cost": 2,
+              "x": 124,
+              "y": 650,
+              "description": "+8 Défense et +40 PV max.",
+              "effects": {
+                "params": {
+                  "def": 8,
+                  "mhp": 40
+                }
+              },
+              "requires": [
+                "hero_vanguard_vitality",
+                "hero_vanguard_shield"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "hero_vanguard_oath",
+              "name": "Mur du héros",
+              "type": "passive",
+              "iconIndex": 101,
+              "cost": 3,
+              "x": 124,
+              "y": 780,
+              "description": "+8% PV max.",
+              "effects": {
+                "rates": {
+                  "mhp": 1.08
+                }
+              },
+              "requires": [
+                "hero_vanguard_line"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "hero_scout",
+          "name": "Éclaireur",
+          "description": "Initiative, vitesse et attaques opportunistes.",
+          "nodes": [
+            {
+              "id": "hero_scout_edge",
+              "name": "Coup franc",
+              "type": "passive",
+              "iconIndex": 76,
+              "cost": 1,
+              "x": 484,
+              "y": 130,
+              "description": "+5 Attaque.",
+              "effects": {
+                "params": {
+                  "atk": 5
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "hero_scout_step",
+              "name": "Pas vif",
+              "type": "passive",
+              "iconIndex": 82,
+              "cost": 1,
+              "x": 484,
+              "y": 260,
+              "description": "+7 Agilité.",
+              "effects": {
+                "params": {
+                  "agi": 7
+                }
+              },
+              "requires": [
+                "hero_scout_edge"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "hero_scout_pierce",
+              "name": "Trait perçant",
+              "type": "skill",
+              "iconIndex": 78,
+              "cost": 1,
+              "x": 412,
+              "y": 390,
+              "description": "Apprend Trait perçant.",
+              "effects": {
+                "skillId": 13
+              },
+              "requires": [
+                "hero_scout_step"
+              ],
+              "skillId": 13,
+              "maxRank": 1
+            },
+            {
+              "id": "hero_scout_focus",
+              "name": "Oeil juste",
+              "type": "passive",
+              "iconIndex": 116,
+              "cost": 1,
+              "x": 556,
+              "y": 390,
+              "description": "+4% Précision.",
+              "effects": {
+                "xparams": {
+                  "hit": 0.04
+                }
+              },
+              "requires": [
+                "hero_scout_step"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "hero_scout_rush",
+              "name": "Initiative",
+              "type": "passive",
+              "iconIndex": 82,
+              "cost": 2,
+              "x": 412,
+              "y": 520,
+              "description": "+10 Agilité.",
+              "effects": {
+                "params": {
+                  "agi": 10
+                }
+              },
+              "requires": [
+                "hero_scout_pierce"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "hero_scout_crit",
+              "name": "Frappe nette",
+              "type": "passive",
+              "iconIndex": 116,
+              "cost": 2,
+              "x": 556,
+              "y": 520,
+              "description": "+4% Critique.",
+              "effects": {
+                "xparams": {
+                  "cri": 0.04
+                }
+              },
+              "requires": [
+                "hero_scout_focus"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "hero_scout_duelist",
+              "name": "Dueliste",
+              "type": "passive",
+              "iconIndex": 76,
+              "cost": 2,
+              "x": 484,
+              "y": 650,
+              "description": "+6 Attaque, +6 Agilité.",
+              "effects": {
+                "params": {
+                  "atk": 6,
+                  "agi": 6
+                }
+              },
+              "requires": [
+                "hero_scout_rush",
+                "hero_scout_crit"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "hero_scout_decisive",
+              "name": "Ouverture décisive",
+              "type": "passive",
+              "iconIndex": 97,
+              "cost": 3,
+              "x": 484,
+              "y": 780,
+              "description": "+6% Critique.",
+              "effects": {
+                "xparams": {
+                  "cri": 0.06
+                }
+              },
+              "requires": [
+                "hero_scout_duelist"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "hero_oath",
+          "name": "Serment",
+          "description": "Soutien polyvalent et protection du groupe.",
+          "nodes": [
+            {
+              "id": "hero_oath_calm",
+              "name": "Réserve calme",
+              "type": "passive",
+              "iconIndex": 65,
+              "cost": 1,
+              "x": 844,
+              "y": 130,
+              "description": "+35 PM max.",
+              "effects": {
+                "params": {
+                  "mmp": 35
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "hero_oath_heal",
+              "name": "Soin appris",
+              "type": "skill",
+              "iconIndex": 72,
+              "cost": 1,
+              "x": 844,
+              "y": 260,
+              "description": "Apprend Soin.",
+              "effects": {
+                "skillId": 8
+              },
+              "requires": [
+                "hero_oath_calm"
+              ],
+              "skillId": 8,
+              "maxRank": 1
+            },
+            {
+              "id": "hero_oath_rally",
+              "name": "Ralliement",
+              "type": "skill",
+              "iconIndex": 73,
+              "cost": 1,
+              "x": 772,
+              "y": 390,
+              "description": "Apprend Ralliement.",
+              "effects": {
+                "skillId": 14
+              },
+              "requires": [
+                "hero_oath_heal"
+              ],
+              "skillId": 14,
+              "maxRank": 1
+            },
+            {
+              "id": "hero_oath_luck",
+              "name": "Instinct juste",
+              "type": "passive",
+              "iconIndex": 87,
+              "cost": 1,
+              "x": 916,
+              "y": 390,
+              "description": "+10 Chance.",
+              "effects": {
+                "params": {
+                  "luk": 10
+                }
+              },
+              "requires": [
+                "hero_oath_heal"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "hero_oath_spirit",
+              "name": "Présence claire",
+              "type": "passive",
+              "iconIndex": 101,
+              "cost": 2,
+              "x": 772,
+              "y": 520,
+              "description": "+6 Magie.",
+              "effects": {
+                "params": {
+                  "mat": 6
+                }
+              },
+              "requires": [
+                "hero_oath_rally"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "hero_oath_wisdom",
+              "name": "Sang-froid",
+              "type": "passive",
+              "iconIndex": 85,
+              "cost": 2,
+              "x": 916,
+              "y": 520,
+              "description": "+6 Déf. magique.",
+              "effects": {
+                "params": {
+                  "mdf": 6
+                }
+              },
+              "requires": [
+                "hero_oath_luck"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "hero_oath_banner",
+              "name": "Bannière du groupe",
+              "type": "passive",
+              "iconIndex": 73,
+              "cost": 2,
+              "x": 844,
+              "y": 650,
+              "description": "+5% Attaque.",
+              "effects": {
+                "rates": {
+                  "atk": 1.05
+                }
+              },
+              "requires": [
+                "hero_oath_spirit",
+                "hero_oath_wisdom"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "hero_oath_promise",
+              "name": "Serment vivant",
+              "type": "passive",
+              "iconIndex": 72,
+              "cost": 3,
+              "x": 844,
+              "y": 780,
+              "description": "+6% PM max.",
+              "effects": {
+                "rates": {
+                  "mmp": 1.06
+                }
+              },
+              "requires": [
+                "hero_oath_banner"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4,
+                "questCompleted": "gather_flower"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "name": "Guerrier",
+      "trees": [
+        {
+          "id": "warrior_guardian",
+          "name": "Gardien",
+          "description": "Résistance, bouclier et contrôle.",
+          "nodes": [
+            {
+              "id": "warrior_guardian_armor",
+              "name": "Armure vivante",
+              "type": "passive",
+              "iconIndex": 46,
+              "cost": 1,
+              "x": 124,
+              "y": 130,
+              "description": "+130 PV max.",
+              "effects": {
+                "params": {
+                  "mhp": 130
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "warrior_guardian_steel",
+              "name": "Mur d acier",
+              "type": "passive",
+              "iconIndex": 84,
+              "cost": 1,
+              "x": 124,
+              "y": 260,
+              "description": "+8 Défense.",
+              "effects": {
+                "params": {
+                  "def": 8
+                }
+              },
+              "requires": [
+                "warrior_guardian_armor"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "warrior_guardian_shield_bash",
+              "name": "Coup de bouclier",
+              "type": "skill",
+              "iconIndex": 81,
+              "cost": 1,
+              "x": 52,
+              "y": 390,
+              "description": "Apprend Coup de bouclier.",
+              "effects": {
+                "skillId": 15
+              },
+              "requires": [
+                "warrior_guardian_steel"
+              ],
+              "skillId": 15,
+              "maxRank": 1
+            },
+            {
+              "id": "warrior_guardian_counter",
+              "name": "Riposte",
+              "type": "passive",
+              "iconIndex": 119,
+              "cost": 1,
+              "x": 196,
+              "y": 390,
+              "description": "+5% Contre.",
+              "effects": {
+                "xparams": {
+                  "cnt": 0.05
+                }
+              },
+              "requires": [
+                "warrior_guardian_steel"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "warrior_guardian_bulwark",
+              "name": "Rempart",
+              "type": "passive",
+              "iconIndex": 84,
+              "cost": 2,
+              "x": 52,
+              "y": 520,
+              "description": "+7% Défense.",
+              "effects": {
+                "rates": {
+                  "def": 1.07
+                }
+              },
+              "requires": [
+                "warrior_guardian_shield_bash"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "warrior_guardian_anchor",
+              "name": "Ancrage",
+              "type": "passive",
+              "iconIndex": 64,
+              "cost": 2,
+              "x": 196,
+              "y": 520,
+              "description": "+120 PV max.",
+              "effects": {
+                "params": {
+                  "mhp": 120
+                }
+              },
+              "requires": [
+                "warrior_guardian_counter"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "warrior_guardian_warden",
+              "name": "Gardien tenace",
+              "type": "passive",
+              "iconIndex": 75,
+              "cost": 2,
+              "x": 124,
+              "y": 650,
+              "description": "+8 Défense, +3% Contre.",
+              "effects": {
+                "params": {
+                  "def": 8
+                },
+                "xparams": {
+                  "cnt": 0.03
+                }
+              },
+              "requires": [
+                "warrior_guardian_bulwark",
+                "warrior_guardian_anchor"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "warrior_guardian_fortress",
+              "name": "Forteresse",
+              "type": "passive",
+              "iconIndex": 46,
+              "cost": 3,
+              "x": 124,
+              "y": 780,
+              "description": "+10% PV max.",
+              "effects": {
+                "rates": {
+                  "mhp": 1.1
+                }
+              },
+              "requires": [
+                "warrior_guardian_warden"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4,
+                "rarities": [
+                  "rare"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "warrior_berserker",
+          "name": "Berserker",
+          "description": "Dégâts bruts et critique.",
+          "nodes": [
+            {
+              "id": "warrior_berserker_force",
+              "name": "Force brute",
+              "type": "passive",
+              "iconIndex": 76,
+              "cost": 1,
+              "x": 484,
+              "y": 130,
+              "description": "+8 Attaque.",
+              "effects": {
+                "params": {
+                  "atk": 8
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "warrior_berserker_blood",
+              "name": "Sang chaud",
+              "type": "passive",
+              "iconIndex": 116,
+              "cost": 1,
+              "x": 484,
+              "y": 260,
+              "description": "+4% Critique.",
+              "effects": {
+                "xparams": {
+                  "cri": 0.04
+                }
+              },
+              "requires": [
+                "warrior_berserker_force"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "warrior_berserker_fury",
+              "name": "Fureur",
+              "type": "skill",
+              "iconIndex": 97,
+              "cost": 1,
+              "x": 412,
+              "y": 390,
+              "description": "Apprend Fureur.",
+              "effects": {
+                "skillId": 16
+              },
+              "requires": [
+                "warrior_berserker_blood"
+              ],
+              "skillId": 16,
+              "maxRank": 1
+            },
+            {
+              "id": "warrior_berserker_heavy",
+              "name": "Impact lourd",
+              "type": "passive",
+              "iconIndex": 97,
+              "cost": 1,
+              "x": 556,
+              "y": 390,
+              "description": "+6% Attaque.",
+              "effects": {
+                "rates": {
+                  "atk": 1.06
+                }
+              },
+              "requires": [
+                "warrior_berserker_blood"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "warrior_berserker_rage",
+              "name": "Rage contenue",
+              "type": "passive",
+              "iconIndex": 76,
+              "cost": 2,
+              "x": 412,
+              "y": 520,
+              "description": "+10 Attaque.",
+              "effects": {
+                "params": {
+                  "atk": 10
+                }
+              },
+              "requires": [
+                "warrior_berserker_fury"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "warrior_berserker_momentum",
+              "name": "Momentum",
+              "type": "passive",
+              "iconIndex": 82,
+              "cost": 2,
+              "x": 556,
+              "y": 520,
+              "description": "+6 Agilité.",
+              "effects": {
+                "params": {
+                  "agi": 6
+                }
+              },
+              "requires": [
+                "warrior_berserker_heavy"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "warrior_berserker_cleave",
+              "name": "Frappe massive",
+              "type": "passive",
+              "iconIndex": 76,
+              "cost": 2,
+              "x": 484,
+              "y": 650,
+              "description": "+8 Attaque, +4% Critique.",
+              "effects": {
+                "params": {
+                  "atk": 8
+                },
+                "xparams": {
+                  "cri": 0.04
+                }
+              },
+              "requires": [
+                "warrior_berserker_rage",
+                "warrior_berserker_momentum"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "warrior_berserker_ravage",
+              "name": "Ravage",
+              "type": "passive",
+              "iconIndex": 97,
+              "cost": 3,
+              "x": 484,
+              "y": 780,
+              "description": "+10% Attaque.",
+              "effects": {
+                "rates": {
+                  "atk": 1.1
+                }
+              },
+              "requires": [
+                "warrior_berserker_cleave"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "warrior_tactician",
+          "name": "Tacticien",
+          "description": "Précision, tempo et lecture du combat.",
+          "nodes": [
+            {
+              "id": "warrior_tactician_rhythm",
+              "name": "Lecture du rythme",
+              "type": "passive",
+              "iconIndex": 82,
+              "cost": 1,
+              "x": 844,
+              "y": 130,
+              "description": "+8 Agilité.",
+              "effects": {
+                "params": {
+                  "agi": 8
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "warrior_tactician_sure",
+              "name": "Main sûre",
+              "type": "passive",
+              "iconIndex": 116,
+              "cost": 1,
+              "x": 844,
+              "y": 260,
+              "description": "+5% Précision.",
+              "effects": {
+                "xparams": {
+                  "hit": 0.05
+                }
+              },
+              "requires": [
+                "warrior_tactician_rhythm"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "warrior_tactician_estoc",
+              "name": "Estoc rapide",
+              "type": "skill",
+              "iconIndex": 82,
+              "cost": 1,
+              "x": 772,
+              "y": 390,
+              "description": "Apprend Estoc rapide.",
+              "effects": {
+                "skillId": 17
+              },
+              "requires": [
+                "warrior_tactician_sure"
+              ],
+              "skillId": 17,
+              "maxRank": 1
+            },
+            {
+              "id": "warrior_tactician_mark",
+              "name": "Marque tactique",
+              "type": "skill",
+              "iconIndex": 116,
+              "cost": 1,
+              "x": 916,
+              "y": 390,
+              "description": "Apprend Marque tactique.",
+              "effects": {
+                "skillId": 18
+              },
+              "requires": [
+                "warrior_tactician_sure"
+              ],
+              "skillId": 18,
+              "maxRank": 1
+            },
+            {
+              "id": "warrior_tactician_cold",
+              "name": "Sang-froid",
+              "type": "passive",
+              "iconIndex": 87,
+              "cost": 2,
+              "x": 772,
+              "y": 520,
+              "description": "+12 Chance.",
+              "effects": {
+                "params": {
+                  "luk": 12
+                }
+              },
+              "requires": [
+                "warrior_tactician_estoc"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "warrior_tactician_tempo",
+              "name": "Tempo parfait",
+              "type": "passive",
+              "iconIndex": 82,
+              "cost": 2,
+              "x": 916,
+              "y": 520,
+              "description": "+8 Agilité.",
+              "effects": {
+                "params": {
+                  "agi": 8
+                }
+              },
+              "requires": [
+                "warrior_tactician_mark"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "warrior_tactician_exploit",
+              "name": "Exploiter la faille",
+              "type": "passive",
+              "iconIndex": 116,
+              "cost": 2,
+              "x": 844,
+              "y": 650,
+              "description": "+6 Attaque, +5% Précision.",
+              "effects": {
+                "params": {
+                  "atk": 6
+                },
+                "xparams": {
+                  "hit": 0.05
+                }
+              },
+              "requires": [
+                "warrior_tactician_cold",
+                "warrior_tactician_tempo"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "warrior_tactician_master",
+              "name": "Maître tactique",
+              "type": "passive",
+              "iconIndex": 87,
+              "cost": 3,
+              "x": 844,
+              "y": 780,
+              "description": "+8% Agilité.",
+              "effects": {
+                "rates": {
+                  "agi": 1.08
+                }
+              },
+              "requires": [
+                "warrior_tactician_exploit"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "name": "Mage",
+      "trees": [
+        {
+          "id": "mage_flame",
+          "name": "Pyromancie",
+          "description": "Puissance de feu et explosions.",
+          "nodes": [
+            {
+              "id": "mage_flame_ember",
+              "name": "Braise vive",
+              "type": "passive",
+              "iconIndex": 96,
+              "cost": 1,
+              "x": 124,
+              "y": 130,
+              "description": "+9 Magie.",
+              "effects": {
+                "params": {
+                  "mat": 9
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "mage_flame_fire",
+              "name": "Feu appris",
+              "type": "skill",
+              "iconIndex": 64,
+              "cost": 1,
+              "x": 124,
+              "y": 260,
+              "description": "Apprend Feu.",
+              "effects": {
+                "skillId": 9
+              },
+              "requires": [
+                "mage_flame_ember"
+              ],
+              "skillId": 9,
+              "maxRank": 1
+            },
+            {
+              "id": "mage_flame_brasier",
+              "name": "Brasier",
+              "type": "skill",
+              "iconIndex": 64,
+              "cost": 1,
+              "x": 52,
+              "y": 390,
+              "description": "Apprend Brasier.",
+              "effects": {
+                "skillId": 19
+              },
+              "requires": [
+                "mage_flame_fire"
+              ],
+              "skillId": 19,
+              "maxRank": 1
+            },
+            {
+              "id": "mage_flame_heat",
+              "name": "Chaleur dense",
+              "type": "passive",
+              "iconIndex": 97,
+              "cost": 1,
+              "x": 196,
+              "y": 390,
+              "description": "+5% Magie.",
+              "effects": {
+                "rates": {
+                  "mat": 1.05
+                }
+              },
+              "requires": [
+                "mage_flame_fire"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "mage_flame_nova",
+              "name": "Nova de feu",
+              "type": "skill",
+              "iconIndex": 96,
+              "cost": 2,
+              "x": 52,
+              "y": 520,
+              "description": "Apprend Nova de feu.",
+              "effects": {
+                "skillId": 20
+              },
+              "requires": [
+                "mage_flame_brasier"
+              ],
+              "skillId": 20,
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "mage_flame_focus",
+              "name": "Flamme précise",
+              "type": "passive",
+              "iconIndex": 116,
+              "cost": 2,
+              "x": 196,
+              "y": 520,
+              "description": "+4% Précision.",
+              "effects": {
+                "xparams": {
+                  "hit": 0.04
+                }
+              },
+              "requires": [
+                "mage_flame_heat"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "mage_flame_inferno",
+              "name": "Noyau ardent",
+              "type": "passive",
+              "iconIndex": 96,
+              "cost": 2,
+              "x": 124,
+              "y": 650,
+              "description": "+10 Magie.",
+              "effects": {
+                "params": {
+                  "mat": 10
+                }
+              },
+              "requires": [
+                "mage_flame_nova",
+                "mage_flame_focus"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "mage_flame_crown",
+              "name": "Couronne de cendres",
+              "type": "passive",
+              "iconIndex": 97,
+              "cost": 3,
+              "x": 124,
+              "y": 780,
+              "description": "+10% Magie.",
+              "effects": {
+                "rates": {
+                  "mat": 1.1
+                }
+              },
+              "requires": [
+                "mage_flame_inferno"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "mage_storm",
+          "name": "Orage",
+          "description": "Foudre, vitesse et multi-cibles.",
+          "nodes": [
+            {
+              "id": "mage_storm_flow",
+              "name": "Flux bleu",
+              "type": "passive",
+              "iconIndex": 65,
+              "cost": 1,
+              "x": 484,
+              "y": 130,
+              "description": "+45 PM max.",
+              "effects": {
+                "params": {
+                  "mmp": 45
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "mage_storm_thunder",
+              "name": "Foudre apprise",
+              "type": "skill",
+              "iconIndex": 67,
+              "cost": 1,
+              "x": 484,
+              "y": 260,
+              "description": "Apprend Foudre.",
+              "effects": {
+                "skillId": 10
+              },
+              "requires": [
+                "mage_storm_flow"
+              ],
+              "skillId": 10,
+              "maxRank": 1
+            },
+            {
+              "id": "mage_storm_chain",
+              "name": "Chaîne d éclairs",
+              "type": "skill",
+              "iconIndex": 67,
+              "cost": 1,
+              "x": 412,
+              "y": 390,
+              "description": "Apprend Chaîne d éclairs.",
+              "effects": {
+                "skillId": 21
+              },
+              "requires": [
+                "mage_storm_thunder"
+              ],
+              "skillId": 21,
+              "maxRank": 1
+            },
+            {
+              "id": "mage_storm_conduct",
+              "name": "Conduction",
+              "type": "passive",
+              "iconIndex": 82,
+              "cost": 1,
+              "x": 556,
+              "y": 390,
+              "description": "+10 Agilité.",
+              "effects": {
+                "params": {
+                  "agi": 10
+                }
+              },
+              "requires": [
+                "mage_storm_thunder"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "mage_storm_charge",
+              "name": "Charge stable",
+              "type": "passive",
+              "iconIndex": 65,
+              "cost": 2,
+              "x": 412,
+              "y": 520,
+              "description": "+6% PM max.",
+              "effects": {
+                "rates": {
+                  "mmp": 1.06
+                }
+              },
+              "requires": [
+                "mage_storm_chain"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "mage_storm_spark",
+              "name": "Étincelle critique",
+              "type": "passive",
+              "iconIndex": 116,
+              "cost": 2,
+              "x": 556,
+              "y": 520,
+              "description": "+4% Critique.",
+              "effects": {
+                "xparams": {
+                  "cri": 0.04
+                }
+              },
+              "requires": [
+                "mage_storm_conduct"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "mage_storm_storm",
+              "name": "Coeur d orage",
+              "type": "passive",
+              "iconIndex": 67,
+              "cost": 2,
+              "x": 484,
+              "y": 650,
+              "description": "+8 Magie, +8 Agilité.",
+              "effects": {
+                "params": {
+                  "mat": 8,
+                  "agi": 8
+                }
+              },
+              "requires": [
+                "mage_storm_charge",
+                "mage_storm_spark"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "mage_storm_tempest",
+              "name": "Tempête canalisée",
+              "type": "passive",
+              "iconIndex": 67,
+              "cost": 3,
+              "x": 484,
+              "y": 780,
+              "description": "+8% Agilité.",
+              "effects": {
+                "rates": {
+                  "agi": 1.08
+                }
+              },
+              "requires": [
+                "mage_storm_storm"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "mage_arcane",
+          "name": "Arcanes",
+          "description": "Défense magique, contrôle et stabilité.",
+          "nodes": [
+            {
+              "id": "mage_arcane_veil",
+              "name": "Voile ancien",
+              "type": "passive",
+              "iconIndex": 85,
+              "cost": 1,
+              "x": 844,
+              "y": 130,
+              "description": "+9 Déf. magique.",
+              "effects": {
+                "params": {
+                  "mdf": 9
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "mage_arcane_side",
+              "name": "Pas de côté",
+              "type": "passive",
+              "iconIndex": 82,
+              "cost": 1,
+              "x": 844,
+              "y": 260,
+              "description": "+4% Esquive.",
+              "effects": {
+                "xparams": {
+                  "eva": 0.04
+                }
+              },
+              "requires": [
+                "mage_arcane_veil"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "mage_arcane_barrier",
+              "name": "Barrière arcanique",
+              "type": "skill",
+              "iconIndex": 85,
+              "cost": 1,
+              "x": 772,
+              "y": 390,
+              "description": "Apprend Barrière arcanique.",
+              "effects": {
+                "skillId": 22
+              },
+              "requires": [
+                "mage_arcane_side"
+              ],
+              "skillId": 22,
+              "maxRank": 1
+            },
+            {
+              "id": "mage_arcane_mind",
+              "name": "Esprit canalisé",
+              "type": "passive",
+              "iconIndex": 101,
+              "cost": 1,
+              "x": 916,
+              "y": 390,
+              "description": "+5% Déf. magique.",
+              "effects": {
+                "rates": {
+                  "mdf": 1.05
+                }
+              },
+              "requires": [
+                "mage_arcane_side"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "mage_arcane_reserve",
+              "name": "Réserve profonde",
+              "type": "passive",
+              "iconIndex": 65,
+              "cost": 2,
+              "x": 772,
+              "y": 520,
+              "description": "+50 PM max.",
+              "effects": {
+                "params": {
+                  "mmp": 50
+                }
+              },
+              "requires": [
+                "mage_arcane_barrier"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "mage_arcane_mirror",
+              "name": "Reflet magique",
+              "type": "passive",
+              "iconIndex": 85,
+              "cost": 2,
+              "x": 916,
+              "y": 520,
+              "description": "+3% Renvoi magie.",
+              "effects": {
+                "xparams": {
+                  "mrf": 0.03
+                }
+              },
+              "requires": [
+                "mage_arcane_mind"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "mage_arcane_sigil",
+              "name": "Sceau stable",
+              "type": "passive",
+              "iconIndex": 101,
+              "cost": 2,
+              "x": 844,
+              "y": 650,
+              "description": "+8 Magie, +8 Déf. magique.",
+              "effects": {
+                "params": {
+                  "mat": 8,
+                  "mdf": 8
+                }
+              },
+              "requires": [
+                "mage_arcane_reserve",
+                "mage_arcane_mirror"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "mage_arcane_archive",
+              "name": "Mémoire arcanique",
+              "type": "passive",
+              "iconIndex": 101,
+              "cost": 3,
+              "x": 844,
+              "y": 780,
+              "description": "+8% PM max.",
+              "effects": {
+                "rates": {
+                  "mmp": 1.08
+                }
+              },
+              "requires": [
+                "mage_arcane_sigil"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4,
+                "questCompleted": "main_001"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "name": "Prêtre",
+      "trees": [
+        {
+          "id": "priest_light",
+          "name": "Lumière",
+          "description": "Soins directs et puissance sacrée.",
+          "nodes": [
+            {
+              "id": "priest_light_faith",
+              "name": "Foi tranquille",
+              "type": "passive",
+              "iconIndex": 65,
+              "cost": 1,
+              "x": 124,
+              "y": 130,
+              "description": "+45 PM max.",
+              "effects": {
+                "params": {
+                  "mmp": 45
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "priest_light_heal",
+              "name": "Soin appris",
+              "type": "skill",
+              "iconIndex": 72,
+              "cost": 1,
+              "x": 124,
+              "y": 260,
+              "description": "Apprend Soin.",
+              "effects": {
+                "skillId": 8
+              },
+              "requires": [
+                "priest_light_faith"
+              ],
+              "skillId": 8,
+              "maxRank": 1
+            },
+            {
+              "id": "priest_light_major",
+              "name": "Soin majeur",
+              "type": "skill",
+              "iconIndex": 72,
+              "cost": 1,
+              "x": 52,
+              "y": 390,
+              "description": "Apprend Soin majeur.",
+              "effects": {
+                "skillId": 23
+              },
+              "requires": [
+                "priest_light_heal"
+              ],
+              "skillId": 23,
+              "maxRank": 1
+            },
+            {
+              "id": "priest_light_prayer",
+              "name": "Prière claire",
+              "type": "passive",
+              "iconIndex": 101,
+              "cost": 1,
+              "x": 196,
+              "y": 390,
+              "description": "+9 Magie.",
+              "effects": {
+                "params": {
+                  "mat": 9
+                }
+              },
+              "requires": [
+                "priest_light_heal"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "priest_light_mercy",
+              "name": "Grâce",
+              "type": "passive",
+              "iconIndex": 72,
+              "cost": 2,
+              "x": 52,
+              "y": 520,
+              "description": "+5% Magie.",
+              "effects": {
+                "rates": {
+                  "mat": 1.05
+                }
+              },
+              "requires": [
+                "priest_light_major"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "priest_light_purify",
+              "name": "Purification",
+              "type": "skill",
+              "iconIndex": 71,
+              "cost": 2,
+              "x": 196,
+              "y": 520,
+              "description": "Apprend Purification.",
+              "effects": {
+                "skillId": 24
+              },
+              "requires": [
+                "priest_light_prayer"
+              ],
+              "skillId": 24,
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "priest_light_radiance",
+              "name": "Rayonnement",
+              "type": "passive",
+              "iconIndex": 101,
+              "cost": 2,
+              "x": 124,
+              "y": 650,
+              "description": "+8 Magie, +35 PM max.",
+              "effects": {
+                "params": {
+                  "mat": 8,
+                  "mmp": 35
+                }
+              },
+              "requires": [
+                "priest_light_mercy",
+                "priest_light_purify"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "priest_light_miracle",
+              "name": "Miracle",
+              "type": "passive",
+              "iconIndex": 72,
+              "cost": 3,
+              "x": 124,
+              "y": 780,
+              "description": "+10% PM max.",
+              "effects": {
+                "rates": {
+                  "mmp": 1.1
+                }
+              },
+              "requires": [
+                "priest_light_radiance"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "priest_warden",
+          "name": "Protection",
+          "description": "Boucliers, endurance et sécurité.",
+          "nodes": [
+            {
+              "id": "priest_warden_breath",
+              "name": "Souffle préservé",
+              "type": "passive",
+              "iconIndex": 64,
+              "cost": 1,
+              "x": 484,
+              "y": 130,
+              "description": "+80 PV max.",
+              "effects": {
+                "params": {
+                  "mhp": 80
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "priest_warden_sacred",
+              "name": "Voile sacré",
+              "type": "passive",
+              "iconIndex": 85,
+              "cost": 1,
+              "x": 484,
+              "y": 260,
+              "description": "+9 Déf. magique.",
+              "effects": {
+                "params": {
+                  "mdf": 9
+                }
+              },
+              "requires": [
+                "priest_warden_breath"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "priest_warden_blessing",
+              "name": "Bénédiction",
+              "type": "skill",
+              "iconIndex": 73,
+              "cost": 1,
+              "x": 412,
+              "y": 390,
+              "description": "Apprend Bénédiction.",
+              "effects": {
+                "skillId": 25
+              },
+              "requires": [
+                "priest_warden_sacred"
+              ],
+              "skillId": 25,
+              "maxRank": 1
+            },
+            {
+              "id": "priest_warden_steady",
+              "name": "Protection stable",
+              "type": "passive",
+              "iconIndex": 84,
+              "cost": 1,
+              "x": 556,
+              "y": 390,
+              "description": "+5% Défense.",
+              "effects": {
+                "rates": {
+                  "def": 1.05
+                }
+              },
+              "requires": [
+                "priest_warden_sacred"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "priest_warden_aegis",
+              "name": "Égide",
+              "type": "passive",
+              "iconIndex": 85,
+              "cost": 2,
+              "x": 412,
+              "y": 520,
+              "description": "+8 Déf. magique.",
+              "effects": {
+                "params": {
+                  "mdf": 8
+                }
+              },
+              "requires": [
+                "priest_warden_blessing"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "priest_warden_body",
+              "name": "Corps protégé",
+              "type": "passive",
+              "iconIndex": 64,
+              "cost": 2,
+              "x": 556,
+              "y": 520,
+              "description": "+90 PV max.",
+              "effects": {
+                "params": {
+                  "mhp": 90
+                }
+              },
+              "requires": [
+                "priest_warden_steady"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "priest_warden_warden",
+              "name": "Gardien sacré",
+              "type": "passive",
+              "iconIndex": 84,
+              "cost": 2,
+              "x": 484,
+              "y": 650,
+              "description": "+6 Défense, +6 Déf. magique.",
+              "effects": {
+                "params": {
+                  "def": 6,
+                  "mdf": 6
+                }
+              },
+              "requires": [
+                "priest_warden_aegis",
+                "priest_warden_body"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "priest_warden_sanctuary",
+              "name": "Sanctuaire",
+              "type": "passive",
+              "iconIndex": 73,
+              "cost": 3,
+              "x": 484,
+              "y": 780,
+              "description": "+8% Déf. magique.",
+              "effects": {
+                "rates": {
+                  "mdf": 1.08
+                }
+              },
+              "requires": [
+                "priest_warden_warden"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "priest_oracle",
+          "name": "Oracle",
+          "description": "Chance, lecture et jugement.",
+          "nodes": [
+            {
+              "id": "priest_oracle_omen",
+              "name": "Présage",
+              "type": "passive",
+              "iconIndex": 87,
+              "cost": 1,
+              "x": 844,
+              "y": 130,
+              "description": "+12 Chance.",
+              "effects": {
+                "params": {
+                  "luk": 12
+                }
+              },
+              "maxRank": 3
+            },
+            {
+              "id": "priest_oracle_augur",
+              "name": "Mauvais augure",
+              "type": "passive",
+              "iconIndex": 82,
+              "cost": 1,
+              "x": 844,
+              "y": 260,
+              "description": "+4% Esquive.",
+              "effects": {
+                "xparams": {
+                  "eva": 0.04
+                }
+              },
+              "requires": [
+                "priest_oracle_omen"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "priest_oracle_judgment",
+              "name": "Jugement",
+              "type": "skill",
+              "iconIndex": 101,
+              "cost": 1,
+              "x": 772,
+              "y": 390,
+              "description": "Apprend Jugement.",
+              "effects": {
+                "skillId": 26
+              },
+              "requires": [
+                "priest_oracle_augur"
+              ],
+              "skillId": 26,
+              "maxRank": 1
+            },
+            {
+              "id": "priest_oracle_meditate",
+              "name": "Méditation",
+              "type": "passive",
+              "iconIndex": 65,
+              "cost": 1,
+              "x": 916,
+              "y": 390,
+              "description": "+2% Regen PM.",
+              "effects": {
+                "xparams": {
+                  "mrg": 0.02
+                }
+              },
+              "requires": [
+                "priest_oracle_augur"
+              ],
+              "maxRank": 3
+            },
+            {
+              "id": "priest_oracle_clarity",
+              "name": "Clarté",
+              "type": "passive",
+              "iconIndex": 101,
+              "cost": 2,
+              "x": 772,
+              "y": 520,
+              "description": "+8 Magie.",
+              "effects": {
+                "params": {
+                  "mat": 8
+                }
+              },
+              "requires": [
+                "priest_oracle_judgment"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 5
+              }
+            },
+            {
+              "id": "priest_oracle_fortune",
+              "name": "Main du destin",
+              "type": "passive",
+              "iconIndex": 87,
+              "cost": 2,
+              "x": 916,
+              "y": 520,
+              "description": "+12 Chance.",
+              "effects": {
+                "params": {
+                  "luk": 12
+                }
+              },
+              "requires": [
+                "priest_oracle_meditate"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "priest_oracle_vision",
+              "name": "Vision exacte",
+              "type": "passive",
+              "iconIndex": 116,
+              "cost": 2,
+              "x": 844,
+              "y": 650,
+              "description": "+5% Précision, +3% Critique.",
+              "effects": {
+                "xparams": {
+                  "hit": 0.05,
+                  "cri": 0.03
+                }
+              },
+              "requires": [
+                "priest_oracle_clarity",
+                "priest_oracle_fortune"
+              ],
+              "maxRank": 3,
+              "conditions": {
+                "pointsInTree": 6
+              }
+            },
+            {
+              "id": "priest_oracle_prophecy",
+              "name": "Prophétie",
+              "type": "passive",
+              "iconIndex": 87,
+              "cost": 3,
+              "x": 844,
+              "y": 780,
+              "description": "+10% Chance.",
+              "effects": {
+                "rates": {
+                  "luk": 1.1
+                }
+              },
+              "requires": [
+                "priest_oracle_vision"
+              ],
+              "maxRank": 1,
+              "conditions": {
+                "pointsInTree": 8,
+                "level": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

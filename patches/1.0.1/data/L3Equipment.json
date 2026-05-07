@@ -1,0 +1,114 @@
+{
+  "rarities": {
+    "common": {
+      "name": "Commun",
+      "color": "#cbd5e1",
+      "rank": 0
+    },
+    "magic": {
+      "name": "Magique",
+      "color": "#38bdf8",
+      "rank": 1
+    },
+    "rare": {
+      "name": "Rare",
+      "color": "#facc15",
+      "rank": 2
+    },
+    "epic": {
+      "name": "Epique",
+      "color": "#c084fc",
+      "rank": 3
+    },
+    "legendary": {
+      "name": "Legendaire",
+      "color": "#f97316",
+      "rank": 4
+    },
+    "unique": {
+      "name": "Unique",
+      "color": "#fb7185",
+      "rank": 5
+    }
+  },
+  "equipment": {
+    "weapon:1": {
+      "rarity": "rare",
+      "set": "guardian_oath",
+      "bonuses": {
+        "params": {
+          "atk": 4
+        }
+      }
+    },
+    "armor:1": {
+      "rarity": "magic",
+      "set": "guardian_oath",
+      "bonuses": {
+        "params": {
+          "def": 3
+        }
+      }
+    },
+    "armor:2": {
+      "rarity": "magic",
+      "set": "guardian_oath",
+      "bonuses": {
+        "params": {
+          "mdf": 2
+        }
+      }
+    },
+    "armor:3": {
+      "rarity": "epic",
+      "set": "guardian_oath",
+      "bonuses": {
+        "params": {
+          "mhp": 80,
+          "def": 2
+        }
+      }
+    },
+    "armor:4": {
+      "rarity": "legendary",
+      "bonuses": {
+        "params": {
+          "mat": 6,
+          "luk": 4
+        },
+        "rates": {
+          "mat": 1.05
+        }
+      }
+    }
+  },
+  "sets": {
+    "guardian_oath": {
+      "name": "Serment du gardien",
+      "description": "Un premier set de test pour verifier les bonus d'ensemble.",
+      "bonuses": {
+        "2": {
+          "params": {
+            "mhp": 100,
+            "def": 5
+          }
+        },
+        "3": {
+          "rates": {
+            "def": 1.08,
+            "mdf": 1.08
+          }
+        },
+        "4": {
+          "params": {
+            "atk": 8,
+            "mat": 8
+          },
+          "xparams": {
+            "cri": 0.04
+          }
+        }
+      }
+    }
+  }
+}

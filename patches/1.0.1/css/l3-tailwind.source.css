@@ -1,0 +1,21 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .tw-l3-panel {
+        @apply tw-bg-l3-panel tw-text-l3-text tw-border tw-border-l3-border tw-rounded-l3 tw-shadow-l3;
+    }
+
+    .tw-l3-row {
+        @apply tw-flex tw-items-center tw-gap-3;
+    }
+
+    .tw-l3-stack {
+        @apply tw-grid tw-gap-3;
+        align-content: start;
+    }
+
+    .tw-l3-focus {
+        @apply tw-border-l3-accent tw-shadow-l3-glow;
+    }
+}

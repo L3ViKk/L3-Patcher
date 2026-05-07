@@ -1,0 +1,23 @@
+{
+  "version": "1.0.1",
+  "baseUrl": "https://example.com/patches/1.0.1/",
+  "notes": [
+    "Exemple de patch L3.",
+    "Remplace cette URL par ton hebergement."
+  ],
+  "files": [
+    {
+      "path": "js/plugins.js"
+    },
+    {
+      "path": "js/plugins/L3_UIMenus.js"
+    },
+    {
+      "path": "data/L3Quests.json"
+    },
+    {
+      "path": "img/overlays/Map001_light.png"
+    }
+  ],
+  "delete": []
+}

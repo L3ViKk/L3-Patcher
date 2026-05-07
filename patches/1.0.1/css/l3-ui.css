@@ -1,0 +1,20 @@
+/*
+ * L3 UI
+ * Fichier reserve aux retouches visuelles du projet.
+ * Le framework injecte sa base automatiquement ; ce fichier sert aux themes,
+ * fonds, cadres et petits ajustements propres a ton jeu.
+ */
+
+#l3-ui-root .l3-window,
+#l3-ui-root .l3-panel,
+#l3-ui-root .l3-button,
+#l3-ui-root .l3-actor-card {
+    image-rendering: auto;
+}
+
+#l3-ui-root .l3-title-logo,
+#l3-ui-root .l3-menu-game-title,
+#l3-ui-root .l3-title,
+#l3-ui-root .l3-button {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .28);
+}

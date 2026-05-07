@@ -1,0 +1,309 @@
+{
+  "quests": [
+    {
+      "id": "main_001",
+      "type": "main",
+      "title": "Le premier appel !",
+      "description": "Un habitant semble vouloir vous parler. Retournez le voir apres avoir accepte la quete.",
+      "giver": {
+        "mapId": 1,
+        "eventId": 2
+      },
+      "turnIn": {
+        "mapId": 1,
+        "eventId": 2
+      },
+      "objectives": [
+        {
+          "id": "talk_to_event",
+          "type": "talk",
+          "description": "Parler au PNJ de la carte 1",
+          "mapId": 1,
+          "eventId": 2
+        }
+      ],
+      "rewards": {
+        "gold": 100,
+        "items": [
+          {
+            "id": 1,
+            "amount": 1
+          }
+        ],
+        "skillPoints": [
+          {
+            "actorId": 0,
+            "classId": 0,
+            "amount": 1
+          }
+        ]
+      },
+      "dialogues": {
+        "available": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        },
+        "accepted": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        },
+        "decline": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        },
+        "active": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        },
+        "ready": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        },
+        "completed": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        }
+      }
+    },
+    {
+      "id": "side_bat_test",
+      "type": "side",
+      "title": "Nettoyage rapide",
+      "description": "Une petite quete secondaire de test pour verifier le suivi manuel.",
+      "giver": {
+        "mapId": 1,
+        "eventId": 2
+      },
+      "turnIn": {
+        "mapId": 1,
+        "eventId": 2
+      },
+      "objectives": [
+        {
+          "id": "defeat_bats",
+          "type": "enemy",
+          "description": "Vaincre des chauves-souris",
+          "enemyId": 1,
+          "count": 2
+        }
+      ],
+      "rewards": {
+        "gold": 50
+      },
+      "dialogues": {
+        "available": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        },
+        "accepted": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        },
+        "decline": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        },
+        "active": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        },
+        "ready": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        },
+        "completed": {
+          "lines": [],
+          "speaker": "EV002",
+          "faceName": "People1",
+          "faceIndex": 5
+        }
+      }
+    },
+    {
+      "id": "special_first_board",
+      "type": "special",
+      "title": "Contrat renouvelable",
+      "description": "Exemple de quete speciale pensee pour un tableau de quetes.",
+      "giver": {
+        "mapId": 1,
+        "eventId": 3
+      },
+      "turnIn": {
+        "mapId": 1,
+        "eventId": 3
+      },
+      "objectives": [
+        {
+          "id": "bring_potion",
+          "type": "item",
+          "description": "Avoir une potion dans l'inventaire",
+          "itemId": 1,
+          "amount": 1
+        }
+      ],
+      "rewards": {
+        "gold": 25,
+        "skillResets": [
+          {
+            "actorId": 0,
+            "classId": 0,
+            "amount": 1
+          }
+        ]
+      },
+      "repeatable": true,
+      "dialogues": {
+        "available": {
+          "lines": [],
+          "speaker": "EV003",
+          "faceName": "Monster",
+          "faceIndex": 2
+        },
+        "accepted": {
+          "lines": [],
+          "speaker": "EV003",
+          "faceName": "Monster",
+          "faceIndex": 2
+        },
+        "decline": {
+          "lines": [],
+          "speaker": "EV003",
+          "faceName": "Monster",
+          "faceIndex": 2
+        },
+        "active": {
+          "lines": [],
+          "speaker": "EV003",
+          "faceName": "Monster",
+          "faceIndex": 2
+        },
+        "ready": {
+          "lines": [],
+          "speaker": "EV003",
+          "faceName": "Monster",
+          "faceIndex": 2
+        },
+        "completed": {
+          "lines": [],
+          "speaker": "EV003",
+          "faceName": "Monster",
+          "faceIndex": 2
+        }
+      }
+    },
+    {
+      "id": "gather_flower",
+      "type": "side",
+      "title": "Des fleurs pour maman",
+      "description": "La petite fille à besoin de fleurs pour sa maman, elle vous demande de l'aide.",
+      "giver": {
+        "mapId": 1,
+        "eventId": 5
+      },
+      "turnIn": {
+        "mapId": 1,
+        "eventId": 5
+      },
+      "availability": {},
+      "objectives": [
+        {
+          "id": "fleurs",
+          "type": "item",
+          "description": "Ramasser 5 fleurs pour la petite fille.",
+          "itemId": 5,
+          "amount": 5
+        }
+      ],
+      "rewards": {
+        "gold": 5,
+        "exp": 50,
+        "skillPoints": [
+          {
+            "actorId": 0,
+            "classId": 0,
+            "amount": 1
+          }
+        ]
+      },
+      "dialogues": {
+        "available": {
+          "lines": [
+            "Bonjour monsieur !",
+            "J'aimerais ramener des fleurs à ma maman,",
+            "mais je n'arrive pas à les cueillir.",
+            "Pouvez-vous m'aider ?"
+          ],
+          "faceName": "People4",
+          "faceIndex": 1,
+          "speaker": "Cécilia"
+        },
+        "accepted": {
+          "lines": [
+            "Merci monsieur !",
+            "Ma maman sera très contente."
+          ],
+          "faceName": "People4",
+          "faceIndex": 1,
+          "speaker": "Cécilia"
+        },
+        "decline": {
+          "lines": [
+            "Ohhhh.... mince, merci quand même."
+          ],
+          "faceName": "People4",
+          "faceIndex": 1,
+          "speaker": "Cécilia"
+        },
+        "active": {
+          "lines": [
+            "J'ai trop hâte de voir les belles fleurs",
+            "que vous aurez récolté monsieur."
+          ],
+          "faceName": "People4",
+          "faceIndex": 1,
+          "speaker": "Cécilia"
+        },
+        "ready": {
+          "lines": [
+            "Ohhhhh.... Merci monsieur !",
+            "Elles sont belle et elles sentent bon !"
+          ],
+          "faceName": "People4",
+          "faceIndex": 1,
+          "speaker": "Cécilia"
+        },
+        "completed": {
+          "lines": [
+            "Ma maman est super heureuse !",
+            "Merci monsieur !"
+          ],
+          "faceName": "People4",
+          "faceIndex": 1,
+          "speaker": "Cécilia"
+        }
+      }
+    }
+  ]
+}
