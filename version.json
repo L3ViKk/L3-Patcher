@@ -1,30 +1,18 @@
 {
-  "version": "1.0.2",
-  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.2/",
+  "version": "1.0.3",
+  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.3/",
   "notes": [
-    "Synchronisation joueur plus fluide avec interpolation realX/realY.",
-    "Envoi des positions seulement quand l etat change, avec heartbeat.",
-    "Broadcast serveur regule a 50 ms pour limiter les saccades."
+    "Rendu des joueurs distants plus fluide avec buffer adaptatif.",
+    "Prediction courte des deplacements pour reduire les saccades visibles.",
+    "Serveur reseau passe a 33 ms avec compression WebSocket desactivee."
   ],
   "files": [
-    {
-      "path": "js/plugins.js"
-    },
-    {
-      "path": "js/plugins/L3_NetCore.js"
-    },
-    {
-      "path": "L3NetServer/server.js"
-    },
-    {
-      "path": "L3NetServer/online.js"
-    },
-    {
-      "path": "L3NetServer/README.md"
-    },
-    {
-      "path": "package.json"
-    }
+    { "path": "js/plugins.js" },
+    { "path": "js/plugins/L3_NetCore.js" },
+    { "path": "L3NetServer/server.js" },
+    { "path": "L3NetServer/online.js" },
+    { "path": "L3NetServer/README.md" },
+    { "path": "package.json" }
   ],
   "delete": []
 }

@@ -2,22 +2,22 @@
 
 Depot de patchs pour Project1.
 
-Le jeu lit ersion.json, puis telecharge les fichiers declares depuis patches/<version>/.
+Le jeu lit `version.json`, puis telecharge les fichiers declares depuis `patches/<version>/`.
 
 ## URL du manifest
 
-`	ext
+```text
 https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/version.json
-`
+```
 
 ## Version actuelle
 
-$version
+`1.0.3`
 
 ## Derniere mise a jour
 
-- Synchronisation joueur plus fluide.
-- Interpolation des positions distantes.
-- Serveur reseau regule a 50 ms pour les positions.
+- Rendu des joueurs distants plus fluide avec buffer adaptatif.
+- Prediction courte des deplacements pour reduire les saccades visibles.
+- Serveur reseau passe a 33 ms avec compression WebSocket desactivee.
 
 Le premier build avec l'updater reste necessaire. Ensuite les joueurs recuperent les prochains patchs automatiquement au lancement du jeu.
