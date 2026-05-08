@@ -1060,6 +1060,7 @@
         this._l3TargetRealY = 0;
         this._l3TargetTileX = 0;
         this._l3TargetTileY = 0;
+        this._l3TargetMoving = false;
         this._l3LastMoveSeq = 0;
     };
 
@@ -1103,6 +1104,7 @@
         this._l3TargetRealY = targetRealY;
         this._l3TargetTileX = targetX;
         this._l3TargetTileY = targetY;
+        this._l3TargetMoving = !!state.moving;
 
         var sample = {
             mapId: mapId,
@@ -1220,7 +1222,7 @@
             return;
         }
 
-        if (!this.isMoving() && !this._l3MoveQueue.length) {
+        if (!this.isMoving() && !this._l3MoveQueue.length && !this._l3TargetMoving) {
             this._realX += dx * 0.18;
             this._realY += dy * 0.18;
             if (Math.abs(this._realX - this._l3TargetRealX) < 0.003) this._realX = this._l3TargetRealX;
