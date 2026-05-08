@@ -1,0 +1,30 @@
+{
+    "name": "project1",
+    "main": "index.html",
+    "js-flags": "--expose-gc",
+    "scripts": {
+        "tailwind:build": "tailwindcss -i ./css/l3-tailwind.source.css -o ./css/l3-tailwind.css --minify",
+        "tailwind:watch": "tailwindcss -i ./css/l3-tailwind.source.css -o ./css/l3-tailwind.css --watch",
+        "net:start": "node L3NetServer/server.js --max-players 4 --state-interval 50",
+        "net:start:lan": "node L3NetServer/server.js --host 0.0.0.0 --port 7777 --max-players 4 --state-interval 50",
+        "net:start:remote": "node L3NetServer/server.js --host 0.0.0.0 --port 7777 --room LOCAL --max-players 4 --state-interval 50",
+        "net:online": "node L3NetServer/online.js --max-players 4 --state-interval 50",
+        "net:check": "node L3NetServer/check.js",
+        "queststudio:install": "npm --prefix L3QuestStudio install",
+        "queststudio:start": "npm --prefix L3QuestStudio start"
+    },
+    "devDependencies": {
+        "localtunnel": "^2.0.2",
+        "tailwindcss": "^3.4.17"
+    },
+    "window": {
+        "title": "",
+        "toolbar": false,
+        "width": 816,
+        "height": 624,
+        "icon": "icon/icon.png"
+    },
+    "dependencies": {
+        "ws": "^8.18.1"
+    }
+}

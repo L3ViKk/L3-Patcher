@@ -1,128 +1,26 @@
 {
-  "version": "1.0.1",
-  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.1/",
+  "version": "1.0.2",
+  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.2/",
   "notes": [
-    "Activation du gestionnaire de mise a jour GitHub.",
-    "Mise a jour des plugins L3 UI, quetes, equipement, talents, overlay et online.",
-    "Serveur reseau prepare pour des sessions 2 a 4 joueurs."
+    "Synchronisation joueur plus fluide avec interpolation realX/realY.",
+    "Envoi des positions seulement quand l etat change, avec heartbeat.",
+    "Broadcast serveur regule a 50 ms pour limiter les saccades."
   ],
   "files": [
     {
-      "path": "css/l3-tailwind.css"
-    },
-    {
-      "path": "css/l3-tailwind.source.css"
-    },
-    {
-      "path": "css/l3-ui.css"
-    },
-    {
-      "path": "data/Actors.json"
-    },
-    {
-      "path": "data/Animations.json"
-    },
-    {
-      "path": "data/Armors.json"
-    },
-    {
-      "path": "data/Classes.json"
-    },
-    {
-      "path": "data/CommonEvents.json"
-    },
-    {
-      "path": "data/Enemies.json"
-    },
-    {
-      "path": "data/Items.json"
-    },
-    {
-      "path": "data/L3Equipment.json"
-    },
-    {
-      "path": "data/L3Quests.json"
-    },
-    {
-      "path": "data/L3SkillTrees.json"
-    },
-    {
-      "path": "data/L3UpdateManifest.sample.json"
-    },
-    {
-      "path": "data/Map001.json"
-    },
-    {
-      "path": "data/Map002.json"
-    },
-    {
-      "path": "data/MapInfos.json"
-    },
-    {
-      "path": "data/Skills.json"
-    },
-    {
-      "path": "data/States.json"
-    },
-    {
-      "path": "data/System.json"
-    },
-    {
-      "path": "data/Tilesets.json"
-    },
-    {
-      "path": "data/Troops.json"
-    },
-    {
-      "path": "data/Weapons.json"
-    },
-    {
       "path": "js/plugins.js"
-    },
-    {
-      "path": "js/plugins/L3_CSSWindowSystem.js"
-    },
-    {
-      "path": "js/plugins/L3_EquipmentSystem.js"
     },
     {
       "path": "js/plugins/L3_NetCore.js"
     },
     {
-      "path": "js/plugins/L3_OverlayMapping.js"
-    },
-    {
-      "path": "js/plugins/L3_QuestSystem.js"
-    },
-    {
-      "path": "js/plugins/L3_ResolutionManager.js"
-    },
-    {
-      "path": "js/plugins/L3_SkillTrees.js"
-    },
-    {
-      "path": "js/plugins/L3_UICore.js"
-    },
-    {
-      "path": "js/plugins/L3_UIMenus.js"
-    },
-    {
-      "path": "js/plugins/L3_UIScenes.js"
-    },
-    {
-      "path": "js/plugins/L3_UpdateManager.js"
-    },
-    {
-      "path": "L3NetServer/check.js"
+      "path": "L3NetServer/server.js"
     },
     {
       "path": "L3NetServer/online.js"
     },
     {
       "path": "L3NetServer/README.md"
-    },
-    {
-      "path": "L3NetServer/server.js"
     },
     {
       "path": "package.json"

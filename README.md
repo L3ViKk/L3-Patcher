@@ -14,11 +14,10 @@ https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/version.json
 
 $version
 
-## Utilisation
+## Derniere mise a jour
 
-1. Active L3_UpdateManager dans RPG Maker MV.
-2. Mets l'URL du manifest dans le parametre Manifest URL.
-3. Compile une premiere build avec l'updater actif.
-4. Pour les versions suivantes, incremente ersion.json, ajoute les fichiers dans patches/<nouvelle-version>/, puis publie sur GitHub.
+- Synchronisation joueur plus fluide.
+- Interpolation des positions distantes.
+- Serveur reseau regule a 50 ms pour les positions.
 
 Le premier build avec l'updater reste necessaire. Ensuite les joueurs recuperent les prochains patchs automatiquement au lancement du jeu.
