@@ -1,16 +1,17 @@
 {
-  "version": "1.0.6",
-  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.6/",
+  "version": "1.0.7",
+  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.7/",
   "notes": [
-    "Reduction forte du trafic reseau en mode tunnel.",
-    "Le paquet playerMove reste immediat, mais playerState est moins frequent.",
-    "Meilleure chance de tenir 3-4 joueurs via localtunnel."
+    "Le mode en ligne utilise maintenant Cloudflare Quick Tunnel par defaut.",
+    "L'ancien tunnel localtunnel reste disponible avec npm run net:online:localtunnel.",
+    "Le bouton heberger du jeu privilegie un tunnel Cloudflare propre pour les sessions 3-4 joueurs."
   ],
   "files": [
     { "path": "js/plugins.js" },
     { "path": "js/plugins/L3_NetCore.js" },
     { "path": "L3NetServer/server.js" },
     { "path": "L3NetServer/online.js" },
+    { "path": "L3NetServer/cloudflare.js" },
     { "path": "L3NetServer/README.md" },
     { "path": "package.json" }
   ],
