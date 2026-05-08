@@ -12,12 +12,12 @@ https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/version.json
 
 ## Version actuelle
 
-`1.0.5`
+`1.0.6`
 
 ## Derniere mise a jour
 
-- Synchronisation reseau V3 avec paquets de mouvement immediats.
-- Deplacements distants par file de tuiles pour mieux respecter RPG Maker MV.
-- Ping et qualite reseau visibles dans le HUD et le menu En ligne.
+- Reduction forte du trafic reseau en mode tunnel.
+- `playerMove` reste immediat, mais `playerState` est moins frequent.
+- Meilleure chance de tenir 3-4 joueurs via localtunnel.
 
 Le premier build avec l'updater reste necessaire. Si un vieux build bloque sur la creation du backup, remplace une fois `www/js/plugins/L3_UpdateManager.js`, puis relance le jeu.

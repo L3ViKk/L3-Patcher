@@ -1,10 +1,10 @@
 {
-  "version": "1.0.5",
-  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.5/",
+  "version": "1.0.6",
+  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.6/",
   "notes": [
-    "Synchronisation reseau V3 avec paquets de mouvement immediats.",
-    "Deplacements distants plus naturels avec file de tuiles et correction douce.",
-    "Ajout du ping/qualite reseau dans le HUD et le menu En ligne."
+    "Reduction forte du trafic reseau en mode tunnel.",
+    "Le paquet playerMove reste immediat, mais playerState est moins frequent.",
+    "Meilleure chance de tenir 3-4 joueurs via localtunnel."
   ],
   "files": [
     { "path": "js/plugins.js" },
