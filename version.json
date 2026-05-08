@@ -4,7 +4,8 @@
   "notes": [
     "Le mode en ligne utilise maintenant Cloudflare Quick Tunnel par defaut.",
     "L'ancien tunnel localtunnel reste disponible avec npm run net:online:localtunnel.",
-    "Le bouton heberger du jeu privilegie un tunnel Cloudflare propre pour les sessions 3-4 joueurs."
+    "Le bouton heberger du jeu privilegie un tunnel Cloudflare propre pour les sessions 3-4 joueurs.",
+    "Les anciens liens tunnel generes sont nettoyes pendant le patch."
   ],
   "files": [
     { "path": "js/plugins.js" },
@@ -15,5 +16,7 @@
     { "path": "L3NetServer/README.md" },
     { "path": "package.json" }
   ],
-  "delete": []
+  "delete": [
+    "L3NetServer/remote-url.json"
+  ]
 }
