@@ -1,14 +1,13 @@
 {
-  "version": "1.0.4",
-  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.4/",
+  "version": "1.0.5",
+  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.5/",
   "notes": [
-    "Correction de l'updater dans les builds RPG Maker MV anciens.",
-    "Creation des dossiers de backup compatible avec l'ancien NW.js.",
-    "Conserve les ameliorations reseau du patch 1.0.3."
+    "Synchronisation reseau V3 avec paquets de mouvement immediats.",
+    "Deplacements distants plus naturels avec file de tuiles et correction douce.",
+    "Ajout du ping/qualite reseau dans le HUD et le menu En ligne."
   ],
   "files": [
     { "path": "js/plugins.js" },
-    { "path": "js/plugins/L3_UpdateManager.js" },
     { "path": "js/plugins/L3_NetCore.js" },
     { "path": "L3NetServer/server.js" },
     { "path": "L3NetServer/online.js" },
