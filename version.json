@@ -1,11 +1,10 @@
 {
-  "version": "1.0.7",
-  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.7/",
+  "version": "1.0.8",
+  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.8/",
   "notes": [
-    "Le mode en ligne utilise maintenant Cloudflare Quick Tunnel par defaut.",
-    "L'ancien tunnel localtunnel reste disponible avec npm run net:online:localtunnel.",
-    "Le bouton heberger du jeu privilegie un tunnel Cloudflare propre pour les sessions 3-4 joueurs.",
-    "Les anciens liens tunnel generes sont nettoyes pendant le patch."
+    "Le jeu ne reutilise plus les anciens liens temporaires trycloudflare ou loca.lt stockes.",
+    "Le script Cloudflare attend que le DNS et le serveur soient vraiment joignables avant d'ecrire le lien.",
+    "Correction du cas ou l'interface affichait un ancien lien different de celui de PowerShell."
   ],
   "files": [
     { "path": "js/plugins.js" },
