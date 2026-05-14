@@ -12,12 +12,12 @@ https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/version.json
 
 ## Version actuelle
 
-`1.0.11`
+`1.0.12`
 
 ## Derniere mise a jour
 
-- Ajout du lobby multijoueur directement depuis l'ecran titre.
-- Le serveur annonce les parties ouvertes avec nom, hote, statut et slots disponibles.
-- L'hote peut creer une salle d'attente et lancer la partie pour tous les joueurs.
+- Correction de la liste des parties disponibles depuis l'ecran titre.
+- Le serveur accepte maintenant `/rooms` avec les parametres de cache du client.
+- La synchronisation joueur ne tente plus de lire la map avant le lancement de la partie.
 
 Le premier build avec l'updater reste necessaire. Si un vieux build bloque sur la creation du backup, remplace une fois `www/js/plugins/L3_UpdateManager.js`, puis relance le jeu.

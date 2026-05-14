@@ -1,10 +1,10 @@
 {
-  "version": "1.0.11",
-  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.11/",
+  "version": "1.0.12",
+  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.12/",
   "notes": [
-    "Ajout du lobby multijoueur directement depuis l'ecran titre.",
-    "Le serveur annonce les parties ouvertes avec nom, hote, statut et slots disponibles.",
-    "L'hote peut creer une salle d'attente et lancer la partie pour tous les joueurs."
+    "Correction de la liste des parties disponibles depuis l'ecran titre.",
+    "Le serveur accepte maintenant /rooms avec les parametres de cache du client.",
+    "La synchronisation joueur ne tente plus de lire la map avant le lancement de la partie."
   ],
   "files": [
     { "path": "js/plugins/L3_NetCore.js" },
