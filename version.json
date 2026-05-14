@@ -1,13 +1,14 @@
 {
-  "version": "1.0.10",
-  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.10/",
+  "version": "1.0.11",
+  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.11/",
   "notes": [
-    "Le serveur distant direct ecrit maintenant automatiquement le lien a partager.",
-    "Heberger une partie utilise le serveur local direct au lieu de relancer Cloudflare quand un lien direct est disponible.",
-    "Le lien affiche en jeu correspond au port 7777 ouvert sur la box."
+    "Ajout du lobby multijoueur directement depuis l'ecran titre.",
+    "Le serveur annonce les parties ouvertes avec nom, hote, statut et slots disponibles.",
+    "L'hote peut creer une salle d'attente et lancer la partie pour tous les joueurs."
   ],
   "files": [
     { "path": "js/plugins/L3_NetCore.js" },
+    { "path": "js/plugins/L3_UIMenus.js" },
     { "path": "L3NetServer/server.js" }
   ],
   "delete": []
