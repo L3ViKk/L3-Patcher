@@ -12,12 +12,12 @@ https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/version.json
 
 ## Version actuelle
 
-`1.0.9`
+`1.0.10`
 
 ## Derniere mise a jour
 
-- Le script Cloudflare n'abandonne plus si le DNS met du temps a propager le nouveau lien.
-- Le lien est ecrit des sa generation, puis verifie en arriere-plan.
-- Le jeu retente automatiquement la connexion au tunnel Cloudflare pendant son activation.
+- Le serveur distant direct ecrit maintenant automatiquement le lien a partager.
+- Heberger une partie utilise le serveur local direct au lieu de relancer Cloudflare quand un lien direct est disponible.
+- Le lien affiche en jeu correspond au port 7777 ouvert sur la box.
 
 Le premier build avec l'updater reste necessaire. Si un vieux build bloque sur la creation du backup, remplace une fois `www/js/plugins/L3_UpdateManager.js`, puis relance le jeu.
