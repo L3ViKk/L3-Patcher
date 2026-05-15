@@ -1,13 +1,15 @@
 {
-  "version": "1.0.13",
-  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.13/",
+  "version": "1.0.14",
+  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.14/",
   "notes": [
-    "Le joueur est maintenant deconnecte automatiquement quand il revient a l'ecran titre.",
-    "Le slot reseau est libere cote serveur apres un retour titre.",
-    "Les joueurs distants sont nettoyes localement a la sortie de session."
+    "Patch complet du lobby titre multijoueur pour les builds qui ont saute une version.",
+    "Le bouton Multijoueur est injecte correctement dans l'ecran titre.",
+    "Le serveur de lobby et le NetCore sont remis au meme niveau."
   ],
   "files": [
-    { "path": "js/plugins/L3_NetCore.js" }
+    { "path": "js/plugins/L3_NetCore.js" },
+    { "path": "js/plugins/L3_UIMenus.js" },
+    { "path": "L3NetServer/server.js" }
   ],
   "delete": []
 }
