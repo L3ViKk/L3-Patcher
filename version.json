@@ -1,15 +1,13 @@
 {
-  "version": "1.0.14",
-  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.14/",
+  "version": "1.0.15",
+  "baseUrl": "https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/patches/1.0.15/",
   "notes": [
-    "Patch complet du lobby titre multijoueur pour les builds qui ont saute une version.",
-    "Le bouton Multijoueur est injecte correctement dans l'ecran titre.",
-    "Le serveur de lobby et le NetCore sont remis au meme niveau."
+    "Ajout de la capture complete de map pour L3 Overlay Mapping.",
+    "F10 genere une base propre et une version avec grille dans img/overlays/captures/.",
+    "Ajout des commandes plugin L3Overlay capture, capture base, capture grid et capture templates."
   ],
   "files": [
-    { "path": "js/plugins/L3_NetCore.js" },
-    { "path": "js/plugins/L3_UIMenus.js" },
-    { "path": "L3NetServer/server.js" }
+    { "path": "js/plugins/L3_OverlayMapping.js" }
   ],
   "delete": []
 }
