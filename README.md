@@ -12,12 +12,12 @@ https://raw.githubusercontent.com/L3ViKk/L3-Patcher/main/version.json
 
 ## Version actuelle
 
-`1.0.12`
+`1.0.13`
 
 ## Derniere mise a jour
 
-- Correction de la liste des parties disponibles depuis l'ecran titre.
-- Le serveur accepte maintenant `/rooms` avec les parametres de cache du client.
-- La synchronisation joueur ne tente plus de lire la map avant le lancement de la partie.
+- Le joueur est maintenant deconnecte automatiquement quand il revient a l'ecran titre.
+- Le slot reseau est libere cote serveur apres un retour titre.
+- Les joueurs distants sont nettoyes localement a la sortie de session.
 
 Le premier build avec l'updater reste necessaire. Si un vieux build bloque sur la creation du backup, remplace une fois `www/js/plugins/L3_UpdateManager.js`, puis relance le jeu.
